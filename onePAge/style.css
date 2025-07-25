@@ -1,0 +1,211 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin-bottom: 15px;
+}
+
+/* NAVIGATION BAR */
+nav {
+  background: linear-gradient(90deg, #1a2980, #26d0ce);
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+#logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+nav span {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+nav a {
+  color: white;
+  font-size: 20px;
+  margin: 0 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #1a2980;
+  transform: scale(1.1);
+}
+
+/* SECTION WRAPPER */
+.section {
+  padding: 120px 20px 80px;
+  min-height: 100vh;
+}
+
+.section:nth-child(even) {
+  background-color: #eaf6f6;
+}
+
+/* HOME SECTION */
+.home-section {
+  background: url('./Assets/india_blue.jpg') no-repeat center center/cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+  padding-top: 100px; /* to account for fixed navbar */
+}
+.India Map{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+  padding-top: 100px; /* to account for fixed navbar */
+}
+
+
+.home-section h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.home-section p {
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+/* ABOUT SECTION */
+#about {
+  padding: 60px 40px;
+  background-color: #ffffff;
+}
+
+#about .abo {
+  font-size: 40px;
+  color: #1a2980;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#about h3 {
+  margin-top: 25px;
+  color: #185a9d;
+}
+
+#about ul {
+  padding-left: 25px;
+}
+
+/* SERVICE SECTION */
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  padding: 60px 0;
+}
+
+.service img {
+  height: 250px;
+  width: 350px;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.service img:hover {
+  transform: scale(1.05);
+}
+
+.our {
+  text-align: center;
+  font-size: 32px;
+  margin: 20px 0;
+  color: #333;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1a2980;
+  color: white;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  nav span {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 18px;
+  }
+
+  .home-section h1 {
+    font-size: 36px;
+  }
+
+  .service img {
+    width: 90%;
+    height: auto;
+  }
+
+  #about {
+    padding: 40px 20px;
+  }
+}
+
+

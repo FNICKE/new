@@ -1,277 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destination</title>
-</head>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destination</title>
+  <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-        background-image: url("Assets/background.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        height: 100vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
+      background-image: url("Assets/background.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', sans-serif;
     }
-
-
-    .home {
-        font-size: 25px;
-        font-weight: 600px;
-        margin-left: 15%;
-        padding: 15px 20px;
-    }
-
-    .destination {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .packages {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .gallery {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .contact {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .login {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
 
     nav {
-        background: linear-gradient(90deg, #1a2980, #26d0ce);
-        height: 100px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-
-        position: fixed;
-
+      background: linear-gradient(90deg, #1a2980, #26d0ce);
+      height: 100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      flex-wrap: wrap;
     }
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 20px;
-        font-size: 28px;
-        font-weight: 500;
-        transition: color 0.3s ease, transform 0.3s ease;
-
-    }
-
-    nav a:hover {
-        background-color: #1a2980;
-        border-radius: 15px;
-        color: #ffdd57;
-        transform: scale(1.1);
-        text-decoration: underline;
-    }
-
-    .india {
-
-        height: 100vh;
-        width: 100vw;
+    .brand {
+      display: flex;
+      align-items: center;
     }
 
     #logo {
-        height: 80px;
-        width: 80px;
-        border-radius: 100%;
-        margin-left: 15px;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
     }
 
     .span1 {
-        color: white;
-        font-size: 30px;
-        margin-left: 1%;
+      color: white;
+      font-size: 28px;
+      margin-left: 10px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      margin-left: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #1a2980;
+      border-radius: 15px;
+      color: #ffdd57;
+      transform: scale(1.1);
+      text-decoration: underline;
+    }
+
+    .mainContainer {
+      margin-top: 110px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .container {
-        height: 700px;
-        width: 900px;
-        border: 1px solid red;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 110px;
-        margin-left: 30%;
-        border-radius: 45px;
-        background-image: url("Assets");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background: linear-gradient(90deg, #2193b0, #6dd5ed);
-
-
-    }
-
-    span {
-        font-size: 20px;
-        color: black;
+      max-width: 1000px;
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #2193b0, #6dd5ed);
+      border-radius: 30px;
+      padding: 20px;
+      margin-bottom: 30px;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .img {
-        width: 45%;
-        height: 400px;
-        width: 400px;
-        border-radius: 25px;
-        margin-right: 20px;
-    }
-
-    .img:hover {
-        box-shadow: #0971d2;
-        background-color: #1a2980;
+      flex: 1 1 300px;
+      height: auto;
+      max-width: 400px;
+      border-radius: 20px;
     }
 
     .description {
-        width: 50%;
-        font-size: 18px;
-        color: #333;
-        line-height: 1.6;
-        font-family: 'Segoe UI', sans-serif;
+      flex: 1 1 300px;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
     }
 
-    @media screen and (max-width: 768px) {
-        .container {
-            flex-direction: column;
-            width: 90%;
-            margin-left: 5%;
-            height: auto;
-        }
-
-        .img,
-        .description {
-            width: 100%;
-            margin: 10px 0;
-        }
-        .mainContainer{
-            background: linear-gradient(90deg, #2193b0, #6dd5ed);
-
-        }
+    .description span {
+      display: block;
+      font-size: 18px;
+      color: #222;
     }
-</style>
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+      }
+
+      .nav-links {
+        justify-content: center;
+        margin: 10px 0;
+      }
+
+      nav a {
+        margin: 10px;
+        font-size: 16px;
+      }
+
+      .span1 {
+        font-size: 22px;
+      }
+
+      .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+
+      .img {
+        max-width: 90%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .span1 {
+        font-size: 20px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .description span {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
 
 <body>
-
-    <div class="navbar">
-        <nav>
-            <img src="./Assets/logo.jpg" alt="" id="logo">
-            <span class="span1">TripYatra</span>
-            <a href="./Home.html" class="home">Home</a>
-            <a href="./Destination.html" class="destination">Destination</a>
-            <a href="./Packages.html" class="packages">Packages</a>
-            <a href="./Gallery.html" class="gallery">Gallery</a>
-            <a href="./Contact.html" class="contact">Contact</a>
-            <a href="./Login.html" class="login">Login</a>
-        </nav>
+  <nav>
+    <div class="brand">
+      <img src="./Assets/logo.jpg" alt="Logo" id="logo" />
+      <span class="span1">TripYatra</span>
     </div>
-    <br><br><br><br>
-    <div class="mainContainer">
-        <div class="container">
-            <img src="./Assets/Kashmir5.jpg" alt="Kashmir" class="img">
+    <div class="nav-links">
+      <a href="./Home.html">Home</a>
+      <a href="./Destination.html">Destination</a>
+      <a href="./Packages.html">Packages</a>
+      <a href="./Gallery.html">Gallery</a>
+      <a href="./Contact.html">Contact</a>
+      <a href="./Login.html">Login</a>
+    </div>
+  </nav>
 
-            <div class="description">
-                <span>
-                    ❄️ Welcome to <strong>Kashmir</strong> – the <em>"Paradise on Earth"</em>! 🏔️✨<br><br>
-                    Nestled in the Himalayas, Kashmir offers snow-capped peaks 🏞️, scenic valleys 🌄, and serene lakes
-                    like the famous Dal Lake 🛶. Glide through its waters on a charming shikara ride 🚤 or soak in the
-                    beauty of Mughal gardens 🌸.<br><br>
-                    Adventure lovers can ski in Gulmarg ⛷️, trek through pine forests 🌲, or just enjoy the peaceful
-                    vibes 🕊️.<br><br>
-                    Kashmir is not just a place, it's a feeling. 💙🧳
-                </span>
-            </div>
-        </div>
-
-        <div class="container">
-            <img src="./Assets/ladak3.jpg" alt="Leh-Ladakh" class="img">
-
-            <div class="description">
-                <span>
-                    🏔️ Welcome to <strong>Leh-Ladakh</strong> – the <em>"Land of High Passes"</em>! 🌌🛣️<br><br>
-                    A mystical desert in the sky, Ladakh is known for its rugged landscapes 🏜️, ancient monasteries 🛕,
-                    and
-                    crystal-clear lakes like Pangong Tso 💧 and Tso Moriri. It’s a dream for bikers, trekkers, and
-                    peace-seekers alike! 🏍️🎒<br><br>
-                    Ride through thrilling mountain passes like Khardung La 🚵, meditate in the calm of Hemis Monastery
-                    🙏, or
-                    witness starlit skies in Nubra Valley 🌠.<br><br>
-                    Ladakh isn’t just a destination — it’s an adventure for the soul. 🧡🌄
-                </span>
-            </div>
-        </div>
-
-       <div class="container">
-    <img src="./Assets/simala11.jpg" alt="Shimla and Manali" class="img">
-
-    <div class="description">
+  <div class="mainContainer">
+    <div class="container">
+      <img src="./Assets/Kashmir5.jpg" alt="Kashmir" class="img" />
+      <div class="description">
         <span>
-            🏞️ Welcome to <strong>Shimla & Manali</strong> – the <em>"Queen of Hills & the Valley of Snow"</em>! 🌨️🏔️<br><br>
-            Nestled in the heart of Himachal Pradesh, Shimla charms with its colonial elegance 🕍, toy train rides 🚂, and pine-covered hills 🌲, while Manali enchants with snow adventures ❄️, river rafting 🛶, and the peaceful beauty of Solang Valley 🌄.<br><br>
-            Whether you're strolling down Mall Road 🛍️, sipping chai with a view ☕, or chasing snowflakes in Rohtang Pass ⛷️ — this magical duo offers something for everyone! 💞🚡<br><br>
-            Shimla & Manali aren't just places, they're timeless escapes wrapped in mountain mist. 💙✨
+          ❄️ Welcome to <strong>Kashmir</strong> – the <em>"Paradise on Earth"</em>! 🏔️✨<br /><br />
+          Nestled in the Himalayas, Kashmir offers snow-capped peaks 🏞️, scenic valleys 🌄, and serene lakes like the famous Dal Lake 🛶.<br /><br />
+          Glide through its waters on a charming shikara ride 🚤 or soak in the beauty of Mughal gardens 🌸. Kashmir is not just a place, it's a feeling. 💙🧳
         </span>
+      </div>
     </div>
-</div>
 
-        <div class="container">
-    <img src="./Assets/amaritsar3.jpg" alt="Golden Temple Amritsar" class="img">
-
-    <div class="description">
+    <div class="container">
+      <img src="./Assets/ladak3.jpg" alt="Leh-Ladakh" class="img" />
+      <div class="description">
         <span>
-            🛕 Welcome to <strong>Amritsar</strong> – home of the sacred <em>Golden Temple</em>! 🌟✨<br><br>
-            Located in the heart of Punjab, Amritsar is a vibrant blend of spiritual serenity, rich heritage, and unforgettable hospitality. 💛<br><br>
-            The Golden Temple, glowing in its golden glory, offers peaceful reflection by the Amrit Sarovar 🌊, while the Langar (community kitchen) serves love through meals 🍛 to thousands daily.<br><br>
-            Don’t miss the patriotic energy at the Wagah Border ceremony 🇮🇳🫡 or a stroll through local bazaars filled with phulkari, juttis, and Punjabi flavors! 🛍️🎉<br><br>
-            Amritsar isn’t just a city — it’s a soulful experience that stays with you. 🙏🌅
+          🏔️ Welcome to <strong>Leh-Ladakh</strong> – the <em>"Land of High Passes"</em>! 🌌🛣️<br /><br />
+          A mystical desert in the sky, Ladakh is known for its rugged landscapes 🏜️, crystal-clear lakes, and ancient monasteries 🛕.<br /><br />
+          Ride through Khardung La 🚵 or witness starlit skies in Nubra Valley 🌠. Ladakh isn’t just a destination — it’s an adventure for the soul. 🧡🌄
         </span>
+      </div>
     </div>
-</div>
 
-       <div class="container">
-    <img src="./Assets/kerala9.jpeg" alt="Kerala - Alleppey and Munnar" class="img">
-
-    <div class="description">
+    <div class="container">
+      <img src="./Assets/simala11.jpg" alt="Shimla and Manali" class="img" />
+      <div class="description">
         <span>
-            🌴 Welcome to <strong>Kerala</strong> – the <em>"God's Own Country"</em>! 🚤🌿<br><br>
-            Experience the serene backwaters of Alleppey on a houseboat cruise ⛵, where coconut trees line the water’s edge and life flows slowly and peacefully. 🏡🌅<br><br>
-            Then rise into the misty hills of Munnar, where endless tea gardens 🍃, waterfalls 💦, and mountain breezes make you feel like you're walking through a dream. ☁️🫖<br><br>
-            From Kathakali performances 🎭 to Ayurvedic retreats 🧘, Kerala is a soul-soothing journey of nature, culture, and calm. 💚<br><br>
-            Kerala isn’t just a place — it's a feeling of peace wrapped in green and gold. ✨🌾
+          🏞️ Welcome to <strong>Shimla & Manali</strong> – the <em>"Queen of Hills & the Valley of Snow"</em>! 🌨️🏔️<br /><br />
+          From pine-covered hills 🌲 to Mall Road 🛍️ to snow adventures in Rohtang Pass ⛷️, this duo offers timeless escapes. 💙✨
         </span>
-    </div>
-</div>
-
-
-        </div>
+      </div>
     </div>
 
+    <div class="container">
+      <img src="./Assets/amaritsar3.jpg" alt="Amritsar" class="img" />
+      <div class="description">
+        <span>
+          🛕 Welcome to <strong>Amritsar</strong> – home of the sacred <em>Golden Temple</em>! 🌟✨<br /><br />
+          Enjoy peaceful reflection by the Amrit Sarovar 🌊, delicious langar meals 🍛, and the vibrant Wagah Border ceremony 🇮🇳. Amritsar is a soulful experience. 🙏
+        </span>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="./Assets/kerala9.jpeg" alt="Kerala" class="img" />
+      <div class="description">
+        <span>
+          🌴 Welcome to <strong>Kerala</strong> – <em>"God's Own Country"</em>! 🚤🌿<br /><br />
+          Cruise Alleppey's backwaters ⛵ or explore the misty tea hills of Munnar 🍃. Kerala is peace wrapped in green and gold. ✨🌾
+        </span>
+      </div>
+    </div>
+  </div>
 </body>
-
 </html>

@@ -1,255 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TripYatra</title>
-</head>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TripYatra</title>
+  <style>
     * {
-        margin: 0px;
-        padding: 0px;
-
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .home {
-        font-size: 25px;
-        font-weight: 600px;
-        margin-left: 15%;
-        padding: 15px 20px;
+    body {
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    .destination {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .packages {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .gallery {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .contact {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .login {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-
+    /* NAVBAR */
     nav {
-        background: linear-gradient(90deg, #1a2980, #26d0ce);
-        height: 100px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 40px;
-        position: fixed;
-
+      background: linear-gradient(90deg, #1a2980, #26d0ce);
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      flex-wrap: wrap;
     }
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 20px;
-        font-size: 28px;
-        font-weight: 500;
-        transition: color 0.3s ease, transform 0.3s ease;
-
-    }
-
-    nav a:hover {
-        background-color: #1a2980;
-        border-radius: 15px;
-        color: #ffdd57;
-        transform: scale(1.1);
-        text-decoration: underline;
-    }
-
-    .india {
-
-        height: 100vh;
-        width: 100vw;
+    .brand {
+      display: flex;
+      align-items: center;
     }
 
     #logo {
-        height: 80px;
-        width: 80px;
-        border-radius: 100%;
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
     }
 
-    span {
-        color: white;
-        font-size: 30px;
-        margin-left: 1%;
+    .site-name {
+      color: white;
+      font-size: 28px;
+      margin-left: 10px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      margin-left: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #1a2980;
+      border-radius: 15px;
+      color: #ffdd57;
+      transform: scale(1.1);
+      text-decoration: underline;
+    }
+
+    /* MAIN */
+    .mainContainer {
+      margin-top: 110px;
+      width: 100%;
+    }
+
+    .background img.india {
+      width: 100%;
+      height: auto;
     }
 
     #about {
-  background-color: #f9f9f9;
-  padding: 40px;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
+      background-color: #f9f9f9;
+      padding: 40px;
+      color: #333;
+    }
 
-#about h2 {
-  color: #1a2980;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
+    #about h2 {
+      color: #1a2980;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-#about h3 {
-  color: #1a2980;
-  margin-top: 30px;
-}
+    #about h3 {
+      color: #1a2980;
+      margin-top: 30px;
+    }
 
-#about p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
+    #about p,
+    #about ul {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
 
-#about ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  
-}
-.abo{
-    font-size: 50px;
-    font-weight: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    #about ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
 
-.site-name {
-  color: #26d0ce;
-  font-weight: bold;
-}
+    .our {
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 20px;
+    }
 
-.footer {
-  background-color: #1a2980;
-  color: white;
-  text-align: center;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
+    .service {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      background-image: url("Assets/back1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 30px 10px;
+    }
 
+    .setservice {
+      height: 250px;
+      width: 300px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
 
-.service{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    background-image: url("Assets/back1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.setservice{
-    height: 300px;
-    width: 400px;
-    margin-left: 50px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    margin-top: 50px;
-}
+    /* FOOTER */
+    .footer {
+      background-color: #1a2980;
+      color: white;
+      text-align: center;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
 
-.our{
-    font-weight: 700px;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+      }
 
-}
+      .nav-links {
+        justify-content: center;
+        margin: 10px 0;
+      }
 
-</style>
+      nav a {
+        margin: 10px;
+        font-size: 18px;
+      }
+
+      .site-name {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+
+      .service {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .setservice {
+        width: 90%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #logo {
+        height: 60px;
+        width: 60px;
+      }
+
+      .site-name {
+        font-size: 20px;
+      }
+
+      nav a {
+        font-size: 16px;
+      }
+
+      .our {
+        font-size: 24px;
+      }
+
+      #about h2 {
+        font-size: 26px;
+      }
+
+      #about p,
+      #about ul {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
 
 <body>
-    <nav>
-        <img src="./Assets/logo.jpg" alt="" id="logo">
-        <span>TripYatra</span>
-        <a href="./Home.html" class="home">Home</a>
-        <a href="./Destination.html" class="destination">Destination</a>
-        <a href="./Packages.html" class="packages">Packages</a>
-        <a href="./Gallery.html" class="gallery">Gallery</a>
-        <a href="./Contact.html" class="contact">Contact</a>
-        <a href="./Login.html" class="login">Login</a>
-    </nav>
-    <div class="mainContainer">
+  <!-- Navbar -->
+  <nav>
+    <div class="brand">
+      <img src="./Assets/logo.jpg" alt="TripYatra Logo" id="logo" />
+      <span class="site-name">TripYatra</span>
+    </div>
+    <div class="nav-links">
+      <a href="./Home.html">Home</a>
+      <a href="./Destination.html">Destination</a>
+      <a href="./Packages.html">Packages</a>
+      <a href="./Gallery.html">Gallery</a>
+      <a href="./Contact.html">Contact</a>
+      <a href="./Login.html">Login</a>
+    </div>
+  </nav>
 
-        <div class="background">
-            <img src="./Assets/india_blue.jpg" alt="" class="india">
-            
-        </div>
-
-        <div id="about">
-            <h2 class="abo">About Us</h2>
-
-            <p><strong>Welcome to <span class="site-name">TripYatra</span> – Your Gateway to Exploring
-                    Incredible India!</strong></p>
-
-            <p>
-                India is not just a destination; it’s an emotion, a journey through time, tradition, and timeless
-                beauty. At
-                <strong class="site-name">TripYatra</strong>, we’re passionate about helping you discover the
-                real essence of India – from majestic mountains and serene backwaters to royal palaces, vibrant
-                festivals, and hidden gems.
-            </p>
-
-            <p>
-                Our mission is to inspire travelers with curated guides, breathtaking visuals, and authentic stories
-                that bring India’s rich heritage to life. Whether you’re dreaming of a spiritual journey through
-                Varanasi, a scenic escape to the Himalayas, or a beach retreat in Goa – we’ve got it all covered.
-            </p>
-
-            <h3>✨ What We Offer:</h3>
-            <ul>
-                <li>📸 Stunning photo galleries of iconic and offbeat destinations</li>
-                <li>📍 Detailed travel guides across all regions of India</li>
-                <li>🗺️ Itinerary ideas for all types of travelers – solo, family, or adventure seekers</li>
-                <li>🎭 Cultural insights and tips to travel like a local</li>
-            </ul>
-
-            <p>
-                Join us in discovering India — one destination at a time.<br>
-                Let’s make your next journey unforgettable!
-            </p>
-        </div>
-
-
-            <h1 class="our">Our Services</h1>
-        <div class="service">
-            
-            <img src="./Assets/Traval.png" alt="" class="setservice">
-            <img src="./Assets/j1.jpg" alt="" class="setservice">
-            <img src="./Assets/house.jpg" alt="" class="setservice">
-        </div>
-
-
+  <!-- Main Content -->
+  <div class="mainContainer">
+    <div class="background">
+      <img src="./Assets/india_blue.jpg" alt="India Map" class="india" />
     </div>
 
-    <footer>
-        <div class="footer"> 
-           <p class="footer-note">© 2025 TripYatra. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
+    <div id="about">
+      <h2>About Us</h2>
 
+      <p><strong>Welcome to <span class="site-name">TripYatra</span> – Your Gateway to Exploring Incredible India!</strong></p>
+
+      <p>
+        India is not just a destination; it’s an emotion, a journey through time, tradition, and timeless beauty.
+        At <strong class="site-name">TripYatra</strong>, we’re passionate about helping you discover the real essence
+        of India – from majestic mountains and serene backwaters to royal palaces, vibrant festivals, and hidden gems.
+      </p>
+
+      <p>
+        Our mission is to inspire travelers with curated guides, breathtaking visuals, and authentic stories that bring
+        India’s rich heritage to life. Whether you’re dreaming of a spiritual journey through Varanasi, a scenic escape
+        to the Himalayas, or a beach retreat in Goa – we’ve got it all covered.
+      </p>
+
+      <h3>✨ What We Offer:</h3>
+      <ul>
+        <li>📸 Stunning photo galleries of iconic and offbeat destinations</li>
+        <li>📍 Detailed travel guides across all regions of India</li>
+        <li>🗺️ Itinerary ideas for all types of travelers – solo, family, or adventure seekers</li>
+        <li>🎭 Cultural insights and tips to travel like a local</li>
+      </ul>
+
+      <p>Join us in discovering India — one destination at a time.<br />Let’s make your next journey unforgettable!</p>
+    </div>
+
+    <h1 class="our">Our Services</h1>
+    <div class="service">
+      <img src="./Assets/Traval.png" alt="Travel Service" class="setservice" />
+      <img src="./Assets/j1.jpg" alt="Adventure Service" class="setservice" />
+      <img src="./Assets/house.jpg" alt="Accommodation Service" class="setservice" />
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <p class="footer-note">© 2025 TripYatra. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
 </html>
