@@ -2,231 +2,251 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Packages</title>
-</head>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TripYatra - Packages</title>
+  <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-        background-color: rgba(17, 24, 39, 1);
+      font-family: Arial, sans-serif;
+      background-color: rgba(17, 24, 39, 1);
+      color: white;
     }
 
-    .home {
-        font-size: 25px;
-        font-weight: 600px;
-        margin-left: 15%;
-        padding: 15px 20px;
-    }
-
-    .destination {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .packages {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .gallery {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .contact {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .login {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-
+    /* --- Navbar --- */
     nav {
-        background: linear-gradient(90deg, #1a2980, #26d0ce);
-        height: 100px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-
-        position: fixed;
-
+      background: linear-gradient(90deg, #1a2980, #26d0ce);
+      height: 100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      flex-wrap: wrap;
     }
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 20px;
-        font-size: 28px;
-        font-weight: 500;
-        transition: color 0.3s ease, transform 0.3s ease;
-
-    }
-
-    nav a:hover {
-        background-color: #1a2980;
-        border-radius: 15px;
-        color: #ffdd57;
-        transform: scale(1.1);
-        text-decoration: underline;
-    }
-
-    .india {
-
-        height: 100vh;
-        width: 100vw;
+    .brand {
+      display: flex;
+      align-items: center;
     }
 
     #logo {
-        height: 80px;
-        width: 80px;
-        border-radius: 100%;
-        margin-left: 15px;
-
-
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      margin-right: 10px;
     }
 
-    span {
-        color: white;
-        font-size: 30px;
-        margin-left: 1%;
+    .brand span {
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
     }
 
+    .nav-links {
+      display: flex;
+      margin-left: auto;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 20px;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #1a2980;
+      border-radius: 10px;
+      color: #ffdd57;
+      transform: scale(1.1);
+      text-decoration: underline;
+    }
+
+    /* --- Main Container --- */
     .mainContainer {
-    display: flex;
-    justify-content: center;
-    gap: 40px; 
-    flex-wrap: wrap; 
-    margin-top: 50px;
-}
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding: 140px 20px 40px; /* spacing below navbar */
+    }
 
     .pack {
-        width: 600px;
-        height: 600px;
-        padding: 30px 25px;
-        background: linear-gradient(135deg, #43cea2, #185a9d);
-        border-radius: 20px;
-        color: white;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        font-family: 'Segoe UI', sans-serif;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      width: 100%;
+      max-width: 600px;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     #logo1 {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin: 0 auto 15px auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
     }
 
-
     .destination-title {
-        font-size: 28px;
-        margin-bottom: 10px;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
 
     .pack p {
-        font-size: 18px;
-        margin: 8px 0;
-        line-height: 1.5;
+      font-size: 18px;
+      margin: 8px 0;
+      line-height: 1.5;
     }
 
-    .book-btn {
-        padding: 12px 30px;
-        font-size: 18px;
-        font-weight: bold;
-        background-color: #ffdd57;
-        color: #1a1a1a;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s;
+    .book-btn,
+    .book-btn1 {
+      margin-top: 15px;
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #ffdd57;
+      color: #1a1a1a;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
     }
 
-    .book-btn:hover {
-        background-color: #ffc107;
-        transform: scale(1.05);
-    }
-    .book-btn1{
-        padding: 12px 30px;
-        font-size: 18px;
-        font-weight: bold;
-        background-color: #ffdd57;
-        color: #1a1a1a;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s;
-    }
- 
+    .book-btn:hover,
     .book-btn1:hover {
-        background-color: #ffc107;
-        transform: scale(1.05);
+      background-color: #ffc107;
+      transform: scale(1.05);
     }
-</style>
+
+    /* --- Responsive Media Queries --- */
+    @media (max-width: 1024px) {
+      .nav-links a {
+        margin: 10px;
+        font-size: 18px;
+      }
+
+      .destination-title {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      #logo {
+        height: 60px;
+        width: 60px;
+      }
+
+      .brand span {
+        font-size: 24px;
+      }
+
+      .pack {
+        padding: 20px;
+      }
+
+      .book-btn,
+      .book-btn1 {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links a {
+        font-size: 16px;
+        margin: 8px;
+      }
+
+      .brand span {
+        font-size: 20px;
+      }
+
+      .pack p {
+        font-size: 16px;
+      }
+
+      .destination-title {
+        font-size: 22px;
+      }
+
+      #logo1 {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
 
 <body>
 
-    <div class="navbar">
-        <nav>
-            <img src="./Assets/logo.jpg" alt="" id="logo">
-            <span>TripYatra</span>
-            <a href="./Home.html" class="home">Home</a>
-            <a href="./Destination.html" class="destination">Destination</a>
-            <a href="./Packages.html" class="packages">Packages</a>
-            <a href="./Gallery.html" class="gallery">Gallery</a>
-            <a href="./Contact.html" class="contact">Contact</a>
-            <a href="./Login.html" class="login">Login</a>
-        </nav>
+  <!-- 🌍 Navbar -->
+  <nav>
+    <div class="brand">
+      <img src="./Assets/logo.jpg" alt="TripYatra Logo" id="logo" />
+      <span>TripYatra</span>
     </div>
-    <br><br><br><br><br><br><br><br><br>
-
-    <div class="mainContainer">
-        <div class="pack">
-            <img src="./Assets/logo.jpg" alt="TripYatra Logo" id="logo1">
-
-            <h2 class="destination-title">✨ Kashmir Paradise Tour</h2>
-
-            <p><strong>🗓️ Duration:</strong> 6 Days / 5 Nights</p>
-            <p><strong>💰 Price per Person:</strong> ₹18,999/-</p>
-            <p><strong>📍 Places to Visit:</strong> Srinagar, Gulmarg, Pahalgam, Dal Lake, Mughal Gardens</p>
-            <p><strong>🛣️ Travel Route:</strong> Delhi ➡️ Jammu ➡️ Srinagar ➡️ Gulmarg ➡️ Pahalgam ➡️ Return</p>
-            <a href="./Login.html">
-                <button class="book-btn">📩 Book Now</button></a>
-        </div>
-        <br><br><br><br><br>
-
-        <div class="pack">
-        <img src="./Assets/logo.jpg" alt="TripYatra Logo" id="logo1">
-
-        <h2 class="destination-title">🌴 Kerala Backwaters & Hills Tour</h2>
-
-        <p><strong>🗓️ Duration:</strong> 7 Days / 6 Nights</p>
-        <p><strong>💰 Price per Person:</strong> ₹22,500/-</p>
-        <p><strong>📍 Places to Visit:</strong> Alleppey, Munnar, Kochi, Thekkady, Kumarakom</p>
-        <p><strong>🛣️ Travel Route:</strong> Kochi ➡️ Munnar ➡️ Thekkady ➡️ Alleppey ➡️ Kumarakom ➡️ Kochi</p>
-
-        <button class="book-btn1">📩 Book Now</button>
+    <div class="nav-links">
+      <a href="./Home.html">Home</a>
+      <a href="./Destination.html">Destination</a>
+      <a href="./Packages.html">Packages</a>
+      <a href="./Gallery.html">Gallery</a>
+      <a href="./Contact.html">Contact</a>
+      <a href="./Login.html">Login</a>
     </div>
+  </nav>
+
+  <!-- 🧳 Packages Section -->
+  <div class="mainContainer">
+
+    <div class="pack">
+      <img src="./Assets/logo.jpg" alt="TripYatra Logo" id="logo1" />
+      <h2 class="destination-title">✨ Kashmir Paradise Tour</h2>
+      <p><strong>🗓️ Duration:</strong> 6 Days / 5 Nights</p>
+      <p><strong>💰 Price per Person:</strong> ₹18,999/-</p>
+      <p><strong>📍 Places to Visit:</strong> Srinagar, Gulmarg, Pahalgam, Dal Lake, Mughal Gardens</p>
+      <p><strong>🛣️ Travel Route:</strong> Delhi ➡️ Jammu ➡️ Srinagar ➡️ Gulmarg ➡️ Pahalgam ➡️ Return</p>
+      <a href="./Login.html"><button class="book-btn">📩 Book Now</button></a>
     </div>
 
+    <div class="pack">
+      <img src="./Assets/logo.jpg" alt="TripYatra Logo" id="logo1" />
+      <h2 class="destination-title">🌴 Kerala Backwaters & Hills Tour</h2>
+      <p><strong>🗓️ Duration:</strong> 7 Days / 6 Nights</p>
+      <p><strong>💰 Price per Person:</strong> ₹22,500/-</p>
+      <p><strong>📍 Places to Visit:</strong> Alleppey, Munnar, Kochi, Thekkady, Kumarakom</p>
+      <p><strong>🛣️ Travel Route:</strong> Kochi ➡️ Munnar ➡️ Thekkady ➡️ Alleppey ➡️ Kumarakom ➡️ Kochi</p>
+      <a href="./Login.html"><button class="book-btn1">📩 Book Now</button></a>
+    </div>
+
+  </div>
 
 </body>
 

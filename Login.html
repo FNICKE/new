@@ -1,121 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<style>
-  * {
-        margin: 0px;
-        padding: 0px;
-
-    }
-  body{
-    background-color: rgba(17, 24, 39, 1);
-  }
-   .home {
-        font-size: 25px;
-        font-weight: 600px;
-        margin-left: 15%;
-        padding: 15px 20px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login | TripYatra</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .destination {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
+    body {
+      background: linear-gradient(to right, #1a2980, #26d0ce);
+      min-height: 100vh;
+      padding-top: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .packages {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .gallery {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .contact {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-    .login {
-        font-size: 25px;
-        font-weight: 600px;
-        padding: 15px 20px;
-    }
-
-
+    /* Navbar Styles */
     nav {
-        background: linear-gradient(90deg, #1a2980, #26d0ce);
-        height: 100px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-       
-        position: fixed;
-
+      background: linear-gradient(90deg, #1a2980, #26d0ce);
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 20px;
-        font-size: 28px;
-        font-weight: 500;
-        transition: color 0.3s ease, transform 0.3s ease;
-
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
-    nav a:hover {
-        background-color: #1a2980;
-        border-radius: 15px;
-        color: #ffdd57;
-        transform: scale(1.1);
-        text-decoration: underline;
-    }
-
-    .india {
-
-        height: 100vh;
-        width: 100vw;
+    .brand {
+      display: flex;
+      align-items: center;
     }
 
     #logo {
-        height: 80px;
-        width: 80px;
-        border-radius: 100%;
-        margin-left: 15px;
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      margin-right: 12px;
     }
-     span {
-        color: white;
-        font-size: 30px;
-        margin-left: 1%;
+
+    .site-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
     }
-</style>
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffdd57;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+
+      .nav-links a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+
+    /* Login Form Styles */
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+      width: 350px;
+      backdrop-filter: blur(8px);
+    }
+
+    .login-container h2 {
+      color: white;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .login-container label {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px 10px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .login-container input::placeholder {
+      color: #ddd;
+    }
+
+    .login-container input:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ffdd57;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 16px;
+    }
+
+    .login-container button:hover {
+      background-color: #ffd000;
+      transform: scale(1.02);
+    }
+
+    .login-container .links {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .login-container .links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      margin: 0 5px;
+    }
+
+    .login-container .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
-  <div class="navbar">
-        <nav>
-        <img src="./Assets/logo.jpg" alt="" id="logo">
-        <span>TripYatra</span>
-        <a href="./Home.html" class="home">Home</a>
-        <a href="./Destination.html" class="destination">Destination</a>
-        <a href="./Packages.html" class="packages">Packages</a>
-        <a href="./Gallery.html" class="gallery">Gallery</a>
-        <a href="./Contact.html" class="contact">Contact</a>
-        <a href="./Login.html" class="login">Login</a>
-    </nav>
-    </div>>
 
-
-    <div class="mainContainer">
-
+  <!-- Navbar -->
+  <nav>
+    <div class="navbar-container">
+      <div class="brand">
+        <img src="./Assets/logo.jpg" alt="TripYatra Logo" id="logo" />
+        <span class="site-name">TripYatra</span>
+      </div>
+      <div class="nav-links">
+        <a href="./Home.html">Home</a>
+        <a href="./Destination.html">Destination</a>
+        <a href="./Packages.html">Packages</a>
+        <a href="./Gallery.html">Gallery</a>
+        <a href="./Contact.html">Contact</a>
+        <a href="./Login.html">Login</a>
+      </div>
     </div>
+  </nav>
+
+  <!-- Login Form -->
+  <div class="login-container">
+    <h2>Login to TripYatra</h2>
+    <form action="#">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+
+      <div class="links">
+        <a href="#">Forgot Password?</a> |
+        <a href="#">Create Account</a>
+      </div>
+    </form>
+  </div>
+
 </body>
 </html>
